@@ -89,14 +89,14 @@ class config:
 
 		# Set keys to config object
 		self.config.add_section("db")
-		self.config.set("db", "host", "localhost")
+		self.config.set("db", "host", "db")
 		self.config.set("db", "username", "root")
-		self.config.set("db", "password", "")
+		self.config.set("db", "password", "changeme")
 		self.config.set("db", "database", "ripple")
 		self.config.set("db", "workers", "4")
 
 		self.config.add_section("redis")
-		self.config.set("redis", "host", "localhost")
+		self.config.set("redis", "host", "redis")
 		self.config.set("redis", "port", "6379")
 		self.config.set("redis", "database", "0")
 		self.config.set("redis", "password", "")
@@ -110,7 +110,7 @@ class config:
 		self.config.set("server", "letsapiurl", "http://.../letsapi")
 
 		self.config.add_section("cheesegull")
-		self.config.set("cheesegull", "apiurl", "http://cheesegu.ll/api")
+		self.config.set("cheesegull", "apiurl", "http://cheesegull/api")
 		self.config.set("cheesegull", "apikey", "")
 
 		self.config.add_section("debug")
