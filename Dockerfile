@@ -11,6 +11,8 @@ RUN pip3 install --trusted-host pypi.python.org -r requirements.txt
 RUN python3.7 setup.py build_ext --inplace
 
 RUN mkdir ~/.config && touch ~/.config/ripple_license_agreed
+# generate config
+RUN python3.7 -u pep.py 
 
 # server irc
 EXPOSE 5001 6667
