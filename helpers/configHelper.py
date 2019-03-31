@@ -91,7 +91,7 @@ class config:
 		self.config.add_section("db")
 		self.config.set("db", "host", "db")
 		self.config.set("db", "username", "root")
-		self.config.set("db", "password", "changeme")
+		self.config.set("db", "password", "MYSQL_ROOT_PASSWORD")
 		self.config.set("db", "database", "ripple")
 		self.config.set("db", "workers", "4")
 

@@ -12,10 +12,12 @@ RUN python3.7 setup.py build_ext --inplace
 
 RUN mkdir ~/.config && touch ~/.config/ripple_license_agreed
 # generate config
-RUN python3.7 -u pep.py 
+RUN python3.7 -u pep.py
+RUN chmod +x entrypoint.sh
 
 # server irc
 EXPOSE 5001 6667
+ENV MYSQL_ROOT_PASSWORD changeme
 
-# Run app.py when the container launches
+ENTRYPOINT [ "./entrypoint.sh" ]
 CMD ["python3.7", "-u", "pep.py"]
