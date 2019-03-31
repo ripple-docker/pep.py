@@ -106,7 +106,7 @@ class config:
 		self.config.set("server", "threads", "16")
 		self.config.set("server", "gzip", "1")
 		self.config.set("server", "gziplevel", "6")
-		self.config.set("server", "cikey", "changeme")
+		self.config.set("server", "cikey", "CIKEYVALUE")
 		self.config.set("server", "letsapiurl", "http://.../letsapi")
 
 		self.config.add_section("cheesegull")

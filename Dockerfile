@@ -18,6 +18,7 @@ RUN chmod +x entrypoint.sh
 # server irc
 EXPOSE 5001 6667
 ENV MYSQL_ROOT_PASSWORD changeme
+ENV CIKEY changeme
 
 ENTRYPOINT [ "./entrypoint.sh" ]
 CMD ["python3.7", "-u", "pep.py"]
